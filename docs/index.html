@@ -18,7 +18,14 @@ margin: 0 0.8em 0.2em -1.6em;
 vertical-align: middle;
 }
 </style>
-  <style type="text/css">pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5px}.hljs{color:#24292e;background:#fff}.hljs-doctag,.hljs-keyword,.hljs-meta .hljs-keyword,.hljs-template-tag,.hljs-template-variable,.hljs-type,.hljs-variable.language_{color:#d73a49}.hljs-title,.hljs-title.class_,.hljs-title.class_.inherited__,.hljs-title.function_{color:#6f42c1}.hljs-attr,.hljs-attribute,.hljs-literal,.hljs-meta,.hljs-number,.hljs-operator,.hljs-selector-attr,.hljs-selector-class,.hljs-selector-id,.hljs-variable{color:#005cc5}.hljs-meta .hljs-string,.hljs-regexp,.hljs-string{color:#032f62}.hljs-built_in,.hljs-symbol{color:#e36209}.hljs-code,.hljs-comment,.hljs-formula{color:#6a737d}.hljs-name,.hljs-quote,.hljs-selector-pseudo,.hljs-selector-tag{color:#22863a}.hljs-subst{color:#24292e}.hljs-section{color:#005cc5;font-weight:700}.hljs-bullet{color:#735c0f}.hljs-emphasis{color:#24292e;font-style:italic}.hljs-strong{color:#24292e;font-weight:700}.hljs-addition{color:#22863a;background-color:#f0fff4}.hljs-deletion{color:#b31d28;background-color:#ffeef0}</style>
+  <style type="text/css">pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5px}/*!
+  Theme: Tokyo-night-Dark
+  origin: https://github.com/enkia/tokyo-night-vscode-theme
+  Description: Original highlight.js style
+  Author: (c) Henri Vandersleyen <hvandersleyen@gmail.com>
+  License: see project LICENSE
+  Touched: 2022
+*/.hljs-comment,.hljs-meta{color:#69739e}.hljs-deletion,.hljs-doctag,.hljs-regexp,.hljs-selector-attr,.hljs-selector-class,.hljs-selector-id,.hljs-selector-pseudo,.hljs-tag,.hljs-template-tag,.hljs-variable.language_{color:#f7768e}.hljs-link,.hljs-literal,.hljs-number,.hljs-params,.hljs-template-variable,.hljs-type,.hljs-variable{color:#ff9e64}.hljs-attribute,.hljs-built_in{color:#e0af68}.hljs-keyword,.hljs-property,.hljs-subst,.hljs-title,.hljs-title.class_,.hljs-title.class_.inherited__,.hljs-title.function_{color:#7dcfff}.hljs-selector-tag{color:#73daca}.hljs-addition,.hljs-bullet,.hljs-quote,.hljs-string,.hljs-symbol{color:#9ece6a}.hljs-code,.hljs-formula,.hljs-section{color:#7aa2f7}.hljs-attr,.hljs-char.escape_,.hljs-keyword,.hljs-name,.hljs-operator{color:#bb9af7}.hljs-punctuation{color:#c0caf5}.hljs{background:#181926;color:#cad3f5}.hljs-emphasis{font-style:italic}.hljs-strong{font-weight:700}</style>
   <style type="text/css">
 @charset "UTF-8";
 @font-face {
@@ -46,174 +53,274 @@ font-weight: normal;
 font-style: normal;
 }
 
-html { font-size: 15px; }
-body { width: 58rem;
-margin-left: auto;
-margin-right: auto;
-padding: 0 2rem 8rem 2rem;
-font-family: et-book, Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
-background-color: white;
-color: #404444;
-max-width: 99%;
-box-sizing: border-box;
-counter-reset: sidenote-counter; }
-h1 { font-weight: 400;
-margin-top: 4rem;
-margin-bottom: 1.5rem;
-font-size: 3.2rem;
-line-height: 1; }
-h2 { font-weight: 400;
-margin-top: 2.1rem;
-margin-bottom: 0;
-font-size: 2.2rem;
-line-height: 1; }
-h3 { font-weight: 400;
-font-size: 1.7rem;
-margin-top: 2rem;
-margin-bottom: 0;
-line-height: 1; }
-p.subtitle { font-style: italic;
-margin-top: 1rem;
-margin-bottom: 1rem;
-font-size: 1.8rem;
-display: block;
-line-height: 1; }
-.numeral { font-family: et-book-roman-old-style; }
-.danger { color: red; }
-article { position: relative;
-padding: 5rem 0rem; }
-section { padding-top: 1rem;
-padding-bottom: 1rem; }
-p, ol, ul { font-size: 1.4rem; }
-p { line-height: 2rem;
-margin-top: 1.4rem;
-margin-bottom: 1.4rem;
-padding-right: 0;
-vertical-align: baseline; }
+/* Tufte CSS styles */
+html {
+  font-size: 15px;
+  background-color: #12131a;
+  color: #e2e8f7;
+}
 
+body { width: 58rem;
+       margin-left: auto;
+       margin-right: auto;
+       padding: 0 2rem 8rem 2rem;
+       font-family: et-book, Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
+       background-color: #12131a;
+       color: #e2e8f7;
+       max-width: 99%;
+       box-sizing: border-box;
+       counter-reset: sidenote-counter; }
+
+h1 { font-weight: 400;
+     margin-top: 4rem;
+     margin-bottom: 1.5rem;
+     font-size: 3.2rem;
+     line-height: 1;
+     color: #f0f4fc; }
+
+h2 { 
+     font-weight: 400;
+     margin-top: 2.1rem;
+     margin-bottom: 0;
+     font-size: 2.2rem;
+     line-height: 1;
+     color: #f0f4fc; }
+
+h3 { 
+     font-weight: 400;
+     font-size: 1.7rem;
+     margin-top: 2rem;
+     margin-bottom: 0;
+     line-height: 1;
+     color: #f0f4fc; }
+
+p.subtitle { font-style: italic;
+             margin-top: 1rem;
+             margin-bottom: 1rem;
+             font-size: 1.8rem;
+             display: block;
+             line-height: 1;
+             color: #b8c4ea; }
+
+.numeral { font-family: et-book-roman-old-style; }
+
+.danger { color: #f7768e; }
+
+article { position: relative;
+          padding: 5rem 0rem; }
+
+section { padding-top: 1rem;
+          padding-bottom: 1rem; }
+
+p, ol, ul { font-size: 1.4rem; color: #e2e8f7; }
+
+p { line-height: 2rem;
+    margin-top: 1.4rem;
+    margin-bottom: 1.4rem;
+    padding-right: 0;
+    vertical-align: baseline; }
+
+/* Chapter Epigraphs */
 div.epigraph { margin: 5em 0; }
+
 div.epigraph > blockquote { margin-top: 3em;
-margin-bottom: 3em; }
+                            margin-bottom: 3em; }
+
 div.epigraph > blockquote, div.epigraph > blockquote > p { font-style: italic; }
+
 div.epigraph > blockquote > footer { font-style: normal; }
+
 div.epigraph > blockquote > footer > cite { font-style: italic; }
 
-blockquote { border-left: 4px solid #cccccc;
-font-size: 1.4rem;
-font-style: normal;
-margin: 2rem 0;
-padding-left: 2rem;
-padding-right: 2rem; }
+/* end chapter epigraphs styles */
+
+blockquote { border-left: 4px solid #565f89;
+             font-size: 1.4rem;
+             font-style: normal;
+             margin: 2rem 0;
+             padding-left: 2rem;
+             padding-right: 2rem;
+             color: #c4cef5; }
+
 blockquote p { padding-bottom: 6px; }
+
 blockquote footer { font-size: 1.1rem;
-text-align: right; }
+                    text-align: right;
+                    color: #7a84b3; }
+
 ol, ul { padding-left: 2rem;
--webkit-padding-start: 5%;
--webkit-padding-end: 5%; }
+         -webkit-padding-start: 5%;
+         -webkit-padding-end: 5%; }
+
 li { margin: 1rem 0; }
+
 li p { margin-bottom: 0.5rem;
-margin-top: 0.5rem; }
+       margin-top: 0.5rem; }
+
 figure { padding: 0;
-border: 0;
-font-size: 100%;
-font: inherit;
-vertical-align: baseline;
--webkit-margin-start: 0;
--webkit-margin-end: 0;
-margin: 0 0 3em 0; }
+         border: 0;
+         font-size: 100%;
+         font: inherit;
+         vertical-align: baseline;
+         -webkit-margin-start: 0;
+         -webkit-margin-end: 0;
+         margin: 0 0 3em 0; }
+
 figcaption { float: right;
-clear: right;
-margin-right: -48%;
-margin-top: 0;
-margin-bottom: 0;
-font-size: 1.1rem;
-line-height: 1.6;
-vertical-align: baseline;
-position: relative; }
+             clear: right;
+             margin-right: -48%;
+             margin-top: 0;
+             margin-bottom: 0;
+             font-size: 1.1rem;
+             line-height: 1.6;
+             vertical-align: baseline;
+             position: relative;
+             color: #b2bfe6; }
+
 figure.fullwidth figcaption { margin-right: 24%; }
 
-a:link, a:visited { color: inherit; }
-a:link { text-decoration: none;
-background: -webkit-linear-gradient(#fffff8, #fffff8), -webkit-linear-gradient(#fffff8, #fffff8), -webkit-linear-gradient(#333, #333);
-background: linear-gradient(#fffff8, #fffff8), linear-gradient(#fffff8, #fffff8), linear-gradient(#333, #333);
--webkit-background-size: 0.05em 1px, 0.05em 1px, 1px 1px;
--moz-background-size: 0.05em 1px, 0.05em 1px, 1px 1px;
-background-size: 0.05em 1px, 0.05em 1px, 1px 1px;
-background-repeat: no-repeat, no-repeat, repeat-x;
-text-shadow: 0.03em 0 #fffff8, -0.03em 0 #fffff8, 0 0.03em #fffff8, 0 -0.03em #fffff8, 0.06em 0 #fffff8, -0.06em 0 #fffff8, 0.09em 0 #fffff8, -0.09em 0 #fffff8, 0.12em 0 #fffff8, -0.12em 0 #fffff8, 0.15em 0 #fffff8, -0.15em 0 #fffff8;
-background-position: 0% 93%, 100% 93%, 0% 93%; }
-@media screen and (-webkit-min-device-pixel-ratio: 0) { a:link { background-position-y: 87%, 87%, 87%; } }
-a:link::selection { text-shadow: 0.03em 0 #b4d5fe, -0.03em 0 #b4d5fe, 0 0.03em #b4d5fe, 0 -0.03em #b4d5fe, 0.06em 0 #b4d5fe, -0.06em 0 #b4d5fe, 0.09em 0 #b4d5fe, -0.09em 0 #b4d5fe, 0.12em 0 #b4d5fe, -0.12em 0 #b4d5fe, 0.15em 0 #b4d5fe, -0.15em 0 #b4d5fe;
-background: #b4d5fe; }
-a:link::-moz-selection { text-shadow: 0.03em 0 #b4d5fe, -0.03em 0 #b4d5fe, 0 0.03em #b4d5fe, 0 -0.03em #b4d5fe, 0.06em 0 #b4d5fe, -0.06em 0 #b4d5fe, 0.09em 0 #b4d5fe, -0.09em 0 #b4d5fe, 0.12em 0 #b4d5fe, -0.12em 0 #b4d5fe, 0.15em 0 #b4d5fe, -0.15em 0 #b4d5fe;
-background: #b4d5fe; }
+/* Links: replicate underline that clears descenders */
+a:link, a:visited { color: #7aa2f7; }
 
+a:link { text-decoration: none;
+         background: -webkit-linear-gradient(#12131a, #12131a), -webkit-linear-gradient(#12131a, #12131a), -webkit-linear-gradient(#7aa2f7, #7aa2f7);
+         background: linear-gradient(#12131a, #12131a), linear-gradient(#12131a, #12131a), linear-gradient(#7aa2f7, #7aa2f7);
+         -webkit-background-size: 0.05em 1px, 0.05em 1px, 1px 1px;
+         -moz-background-size: 0.05em 1px, 0.05em 1px, 1px 1px;
+         background-size: 0.05em 1px, 0.05em 1px, 1px 1px;
+         background-repeat: no-repeat, no-repeat, repeat-x;
+         text-shadow: 0.03em 0 #12131a, -0.03em 0 #12131a, 0 0.03em #12131a, 0 -0.03em #12131a, 0.06em 0 #12131a, -0.06em 0 #12131a, 0.09em 0 #12131a, -0.09em 0 #12131a, 0.12em 0 #12131a, -0.12em 0 #12131a, 0.15em 0 #12131a, -0.15em 0 #12131a;
+         background-position: 0% 93%, 100% 93%, 0% 93%; }
+
+@media screen and (-webkit-min-device-pixel-ratio: 0) { a:link { background-position-y: 87%, 87%, 87%; } }
+
+a:link::selection { text-shadow: 0.03em 0 #283457, -0.03em 0 #283457, 0 0.03em #283457, 0 -0.03em #283457, 0.06em 0 #283457, -0.06em 0 #283457, 0.09em 0 #283457, -0.09em 0 #283457, 0.12em 0 #283457, -0.12em 0 #283457, 0.15em 0 #283457, -0.15em 0 #283457;
+                    background: #283457; }
+
+a:link::-moz-selection { text-shadow: 0.03em 0 #283457, -0.03em 0 #283457, 0 0.03em #283457, 0 -0.03em #283457, 0.06em 0 #283457, -0.06em 0 #283457, 0.09em 0 #283457, -0.09em 0 #283457, 0.12em 0 #283457, -0.12em 0 #283457, 0.15em 0 #283457, -0.15em 0 #283457;
+                         background: #283457; }
+
+::selection {
+    background: #283457;
+    color: #c0caf5;
+}
+
+/* Hide the faux underline */
 a img { vertical-align: bottom; }
 
+/* Sidenotes, margin notes, figures, captions */
 img { }
+
 .sidenote, .marginnote { float: right;
-clear: right;
-margin-right: -60%;
-margin-top: 0;
-margin-bottom: 0;
-font-size: 1.1rem;
-line-height: 1.3;
-vertical-align: baseline;
-position: relative; }
+                         clear: right;
+                         margin-right: -60%;
+                         margin-top: 0;
+                         margin-bottom: 0;
+                         font-size: 1.1rem;
+                         line-height: 1.3;
+                         vertical-align: baseline;
+                         position: relative;
+                         color: #b2bfe6; }
+
 .table-caption { float:right;
-clear:right;
-margin-right: -60%;
-margin-top: 0;
-margin-bottom: 0;
-font-size: 1.0rem;
-line-height: 1.6; }
+                 clear:right;
+                 margin-right: -60%;
+                 margin-top: 0;
+                 margin-bottom: 0;
+                 font-size: 1.0rem;
+                 line-height: 1.6;
+                 color: #b2bfe6; }
+
 .sidenote-number { counter-increment: sidenote-counter; }
+
 .sidenote-number:after, .sidenote:before { content: counter(sidenote-counter) " ";
-font-family: et-book-roman-old-style;
-position: relative;
-vertical-align: baseline; }
+                                          font-family: et-book-roman-old-style;
+                                          position: relative;
+                                          vertical-align: baseline;
+                                          color: #7aa2f7; }
+
 .sidenote-number:after { content: counter(sidenote-counter);
-font-size: 1rem;
-top: -0.5rem;
-left: 0.1rem; }
+                         font-size: 1rem;
+                         top: -0.5rem;
+                         left: 0.1rem; }
+
 .sidenote:before { content: counter(sidenote-counter) " ";
-top: -0.5rem; }
+                   top: -0.5rem; }
+
 p, footer, table, div.table-wrapper-small, div.supertable-wrapper > p, div.booktabs-wrapper { }
+
 div.fullwidth, table.fullwidth { }
+
 div.table-wrapper { overflow-x: scroll;
-font-family: "Trebuchet MS", "Gill Sans", "Gill Sans MT", sans-serif; }
+                    font-family: "Trebuchet MS", "Gill Sans", "Gill Sans MT", sans-serif; }
+
 .sans { font-family: "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
-letter-spacing: .03em; }
+        letter-spacing: .03em; }
+
 code, .code { font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
-font-size: 1.125rem;
-line-height: 1.6;
+              font-size: 1.125rem;
+              line-height: 1.6;
+            }
+
+code:not(.hljs) {
+    background: #222638;
+    color: #e2e8f7;
+    padding: 0.2em 0.4em;
+    border-radius: 3px;
+    font-size: 0.95em;
 }
-pre > code.hljs {
-background: hsl(0deg 0% 97%);
-padding: 30px
+
+pre > code.hljs, pre code.hljs {
+    background: #181926;
+    color: #cad3f5;
+    padding: 25px 30px;
+    border: 1px solid #363b54;
+    border-radius: 6px;
+    display: block;
+    overflow-x: auto;
 }
+
 h1 .code, h2 .code, h3 .code { font-size: 0.80em; }
+
 .marginnote .code, .sidenote .code { font-size: 1rem; }
+
 pre.code { padding-left: 2.5%;
-overflow-x: scroll; }
+           overflow-x: scroll; }
+
 .fullwidth { clear:both; }
+
 span.newthought { font-variant: small-caps;
-font-size: 1.2em; }
+                  font-size: 1.2em; }
+
 input.margin-toggle { display: none; }
-label.sidenote-number { display: inline; }
+
+label.sidenote-number { display: inline; color: #7aa2f7; }
+
 label.margin-toggle:not(.sidenote-number) { display: none; }
 
+/* Tables */
+
 table { border-collapse: collapse;
-font-family: "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
-font-size: 1.125rem;
-margin: 2rem 0; }
-th { border-bottom: 2px solid #cccccc;
-font-weight: normal;
-padding: 0.4em 0.8em; }
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
+        font-size: 1.125rem;
+        margin: 2rem 0;
+        color: #e2e8f7; }
+
+th { border-bottom: 2px solid #565f89;
+     font-weight: normal;
+     color: #f0f4fc;
+     padding: 0.4em 0.8em; }
+
 td { padding: 0.4em 0.8em; }
-<
 </style>
-  <style type="text/css">pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5px}.hljs{color:#383a42;background:#fafafa}.hljs-comment,.hljs-quote{color:#a0a1a7;font-style:italic}.hljs-doctag,.hljs-formula,.hljs-keyword{color:#a626a4}.hljs-deletion,.hljs-name,.hljs-section,.hljs-selector-tag,.hljs-subst{color:#e45649}.hljs-literal{color:#0184bb}.hljs-addition,.hljs-attribute,.hljs-meta .hljs-string,.hljs-regexp,.hljs-string{color:#50a14f}.hljs-attr,.hljs-number,.hljs-selector-attr,.hljs-selector-class,.hljs-selector-pseudo,.hljs-template-variable,.hljs-type,.hljs-variable{color:#986801}.hljs-bullet,.hljs-link,.hljs-meta,.hljs-selector-id,.hljs-symbol,.hljs-title{color:#4078f2}.hljs-built_in,.hljs-class .hljs-title,.hljs-title.class_{color:#c18401}.hljs-emphasis{font-style:italic}.hljs-strong{font-weight:700}.hljs-link{text-decoration:underline}</style>
+  <style type="text/css">pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5px}/*!
+  Theme: Tokyo-night-Dark
+  origin: https://github.com/enkia/tokyo-night-vscode-theme
+  Description: Original highlight.js style
+  Author: (c) Henri Vandersleyen <hvandersleyen@gmail.com>
+  License: see project LICENSE
+  Touched: 2022
+*/.hljs-comment,.hljs-meta{color:#69739e}.hljs-deletion,.hljs-doctag,.hljs-regexp,.hljs-selector-attr,.hljs-selector-class,.hljs-selector-id,.hljs-selector-pseudo,.hljs-tag,.hljs-template-tag,.hljs-variable.language_{color:#f7768e}.hljs-link,.hljs-literal,.hljs-number,.hljs-params,.hljs-template-variable,.hljs-type,.hljs-variable{color:#ff9e64}.hljs-attribute,.hljs-built_in{color:#e0af68}.hljs-keyword,.hljs-property,.hljs-subst,.hljs-title,.hljs-title.class_,.hljs-title.class_.inherited__,.hljs-title.function_{color:#7dcfff}.hljs-selector-tag{color:#73daca}.hljs-addition,.hljs-bullet,.hljs-quote,.hljs-string,.hljs-symbol{color:#9ece6a}.hljs-code,.hljs-formula,.hljs-section{color:#7aa2f7}.hljs-attr,.hljs-char.escape_,.hljs-keyword,.hljs-name,.hljs-operator{color:#bb9af7}.hljs-punctuation{color:#c0caf5}.hljs{background:#181926;color:#cad3f5}.hljs-emphasis{font-style:italic}.hljs-strong{font-weight:700}</style>
   <script>/*!
   Highlight.js v11.4.0 (git: 2d0e7c1094)
   (c) 2006-2022 Ivan Sagalaev and other contributors
